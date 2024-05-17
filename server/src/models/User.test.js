@@ -1,6 +1,6 @@
 const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
 const { User } = require('.')
-const db = require('../db/config')
+const {db} = require('../db/config')
 
 // define in global scope
 let user
@@ -23,4 +23,9 @@ describe('User', () => {
    * Create more tests
    * E.g. check that the username of the created user is actually gandalf
    */
+
+  it('has an has the username gandalf', function() {
+    expect(user.username).toBe('gandalf')
+  })
+
 })
